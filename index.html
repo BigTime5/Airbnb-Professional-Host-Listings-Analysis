@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb Professional Host Analysis - Global Market Intelligence Report</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .gradient-card {
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+        }
+        
+        .gradient-green {
+            background: linear-gradient(135deg, #55efc4, #00b894);
+        }
+        
+        .gradient-purple {
+            background: linear-gradient(135deg, #a29bfe, #6c5ce7);
+        }
+        
+        .shadow-custom {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .chart-container {
+            height: 400px;
+            margin: 20px 0;
+        }
+        
+        .city-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .city-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .section-divider {
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            margin: 30px 0;
+            border-radius: 2px;
+        }
+        
+        @media print {
+            .no-print { display: none; }
+            .page-break { page-break-before: always; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Hero Header -->
+    <header class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold mb-4">
+                    <i class="fas fa-home mr-4"></i>
+                    Airbnb Professional Host Analysis
+                </h1>
+                <p class="text-xl mb-6 opacity-90">Comprehensive Market Intelligence Across 6 Global Cities</p>
+                <div class="text-lg">
+                    <i class="fas fa-calendar-alt mr-2"></i>
+                    Analysis Date: October 13, 2025
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Executive Summary -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">
+                <i class="fas fa-chart-line mr-3 text-blue-600"></i>
+                Executive Summary
+            </h2>
+            
+            <div class="bg-blue-50 p-6 rounded-lg mb-8 border-l-4 border-blue-500">
+                <p class="text-lg leading-relaxed text-gray-700">
+                    <strong>Objective:</strong> This analysis examines professional hosting trends on Airbnb across Melbourne, Bangkok, Austin, Istanbul, Cape Town, and Buenos Aires to identify market patterns, pricing strategies, and the impact of professional hosts on the short-term rental ecosystem.
+                </p>
+            </div>
+
+            <!-- Key Statistics Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="gradient-card text-white p-6 rounded-lg shadow-custom text-center">
+                    <div class="text-3xl font-bold mb-2">102,767</div>
+                    <div class="text-sm opacity-90">Total Listings Analyzed</div>
+                </div>
+                <div class="gradient-card text-white p-6 rounded-lg shadow-custom text-center">
+                    <div class="text-3xl font-bold mb-2">6</div>
+                    <div class="text-sm opacity-90">Cities Covered</div>
+                </div>
+                <div class="gradient-card text-white p-6 rounded-lg shadow-custom text-center">
+                    <div class="text-3xl font-bold mb-2">45,208</div>
+                    <div class="text-sm opacity-90">Unique Hosts</div>
+                </div>
+                <div class="gradient-card text-white p-6 rounded-lg shadow-custom text-center">
+                    <div class="text-3xl font-bold mb-2">30.8%</div>
+                    <div class="text-sm opacity-90">Professional Host Market Share</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Data Overview & Methodology -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">
+                <i class="fas fa-database mr-3 text-purple-600"></i>
+                Data Overview & Methodology
+            </h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-custom">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Professional Host Definition</h3>
+                    <p class="text-gray-600 mb-4">Professional hosts are defined as those operating <strong>5 or more listings</strong>, based on industry standards and distribution analysis. This threshold identifies hosts who likely:</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Manage multiple properties as a business</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Have dedicated teams or property management systems</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Generate substantial income from short-term rentals</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Operate with commercial-level efficiency and scale</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-custom">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Processing</h3>
+                    <p class="text-gray-600 mb-4">The analysis processed 109,847 initial listings, retaining 93.6% after data cleaning. Key preprocessing steps included:</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li><i class="fas fa-cog text-blue-500 mr-2"></i>Removal of extreme price outliers (top 1%)</li>
+                        <li><i class="fas fa-cog text-blue-500 mr-2"></i>Handling missing values in review data</li>
+                        <li><i class="fas fa-cog text-blue-500 mr-2"></i>Creating categorical variables for stay types and price ranges</li>
+                        <li><i class="fas fa-cog text-blue-500 mr-2"></i>Standardizing geographic and host information</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- City-by-City Analysis -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center">
+                <i class="fas fa-globe mr-3 text-green-600"></i>
+                City-by-City Analysis
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Melbourne -->
+                <div class="city-card bg-white border border-gray-200 rounded-lg p-6 shadow-custom">
+                    <div class="text-center mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            Melbourne
+                        </h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Total Listings:</span>
+                            <strong class="text-gray-800">18,883</strong>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Professional Hosts:</span>
+                            <strong class="text-blue-600">32.5%</strong>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Median Price:</span>
+                            <strong class="text-green-600">$110</strong>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Long-term Rentals:</span>
+                            <strong class="text-purple-600">4.2%</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bangkok -->
+                <div class="city-card bg-white border border-gray-200 rounded-lg p-6 shadow-custom">
+                    <div class="text-center mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">
+                            <i class="fas fa-map-marker-alt text-orange-500 mr-2"></i>
+                            Bangkok
+                        </h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Total Listings:</span>
+                            <strong class="text-gray-800">17,595</strong>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Professional Hosts:</span>
+                            <strong class="text-blue-600">45.8%</strong>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Median Price:</span>
+                            <strong class="text-green-600">$1,099</strong>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Long-term Rentals:</span>
+                            <strong class="text-purple-600">12.9%</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Austin -->
+                <div class="city-card bg-white border border-gray-200 rounded-lg p-6 shadow-custom">
+                    <div class="text-center mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">
+                            <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i>
+                            Austin
+                        </h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Total Listings:</span>
+                            <strong class="text-gray-800">13,829</strong>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Professional Hosts:</span>
+                            <strong class="text-blue-600">23.9%</strong>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Median Price:</span>
+                            <strong class="text-green-600">$164</strong>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Long-term Rentals:</span>
+                            <strong class="text-purple-600">12.9%</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Istanbul -->
+                <div class="city-card bg-white border border-gray-200 rounded-lg p-6 shadow-custom">
+                    <div class="text-center mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">
+                            <i class="fas fa-map-marker-alt text-purple-500 mr-2"></i>
+                            Istanbul
+                        </h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Total Listings:</span>
+                            <strong class="text-gray-800">21,706</strong>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Professional Hosts:</span>
+                            <strong class="text-blue-600">35.6%</strong>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Median Price:</span>
+                            <strong class="text-green-600">$437</strong>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Long-term Rentals:</span>
+                            <strong class="text-purple-600">3.1%</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cape Town -->
+                <div class="city-card bg-white border border-gray-200 rounded-lg p-6 shadow-custom">
+                    <div class="text-center mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">
+                            <i class="fas fa-map-marker-alt text-green-500 mr-2"></i>
+                            Cape Town
+                        </h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Total Listings:</span>
+                            <strong class="text-gray-800">14,976</strong>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Professional Hosts:</span>
+                            <strong class="text-blue-600">26.4%</strong>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Median Price:</span>
+                            <strong class="text-green-600">$1,100</strong>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Long-term Rentals:</span>
+                            <strong class="text-purple-600">2.6%</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Buenos Aires -->
+                <div class="city-card bg-white border border-gray-200 rounded-lg p-6 shadow-custom">
+                    <div class="text-center mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">
+                            <i class="fas fa-map-marker-alt text-yellow-500 mr-2"></i>
+                            Buenos Aires
+                        </h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Total Listings:</span>
+                            <strong class="text-gray-800">15,778</strong>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Professional Hosts:</span>
+                            <strong class="text-blue-600">24.8%</strong>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Median Price:</span>
+                            <strong class="text-green-600">$2,981</strong>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600">Long-term Rentals:</span>
+                            <strong class="text-purple-600">2.5%</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Professional Host Analysis -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center">
+                <i class="fas fa-users mr-3 text-indigo-600"></i>
+                Professional Host Market Analysis
+            </h2>
+
+            <!-- Market Dominance Chart -->
+            <div class="bg-white p-6 rounded-lg shadow-custom mb-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-6">Professional Host Market Share by City</h3>
+                <div class="chart-container">
+                    <canvas id="marketDominanceChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Key Statistics Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <div class="gradient-purple text-white p-6 rounded-lg shadow-custom text-center">
+                    <div class="text-2xl font-bold mb-2">$178</div>
+                    <div class="text-sm opacity-90">Professional Host Avg Price</div>
+                </div>
+                <div class="gradient-purple text-white p-6 rounded-lg shadow-custom text-center">
+                    <div class="text-2xl font-bold mb-2">$142</div>
+                    <div class="text-sm opacity-90">Individual Host Avg Price</div>
+                </div>
+                <div class="gradient-purple text-white p-6 rounded-lg shadow-custom text-center">
+                    <div class="text-2xl font-bold mb-2">256</div>
+                    <div class="text-sm opacity-90">Prof. Host Avg Availability (days)</div>
+                </div>
+                <div class="gradient-purple text-white p-6 rounded-lg shadow-custom text-center">
+                    <div class="text-2xl font-bold mb-2">198</div>
+                    <div class="text-sm opacity-90">Individual Avg Availability (days)</div>
+                </div>
+            </div>
+
+            <!-- Price Comparison Chart -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-custom">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-6">Price Comparison by City</h3>
+                    <div class="chart-container">
+                        <canvas id="priceComparisonChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-custom">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-6">Room Type Preferences</h3>
+                    <div class="chart-container">
+                        <canvas id="roomTypeChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Price Distribution Analysis -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center">
+                <i class="fas fa-dollar-sign mr-3 text-green-600"></i>
+                Price Distribution Analysis
+            </h2>
+
+            <div class="bg-white p-6 rounded-lg shadow-custom mb-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-6">Median Price by City</h3>
+                <div class="chart-container">
+                    <canvas id="cityPriceChart"></canvas>
+                </div>
+            </div>
+
+            <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-500 mb-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Professional Host Pricing Premium</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">Professional hosts consistently charge higher prices across most cities, with an average premium of <strong>22.3%</strong> over individual hosts. This suggests professional hosts can command higher prices through:</p>
+                <ul class="text-gray-700 space-y-2">
+                    <li><i class="fas fa-check-circle text-green-600 mr-2"></i>Better property management and presentation</li>
+                    <li><i class="fas fa-check-circle text-green-600 mr-2"></i>Enhanced guest experience and amenities</li>
+                    <li><i class="fas fa-check-circle text-green-600 mr-2"></i>Strategic pricing optimization</li>
+                    <li><i class="fas fa-check-circle text-green-600 mr-2"></i>Higher quality properties and locations</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Interactive Maps Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center">
+                <i class="fas fa-map mr-3 text-red-600"></i>
+                Interactive Geographic Visualizations
+            </h2>
+            
+            <p class="text-lg text-gray-600 text-center mb-8">
+                Explore detailed interactive maps showing listing locations with price-based color coding for each city
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="https://page.gensparksite.com/jupyter/3469fc99-91b8-4c22-a875-a7a67c0c2962/output/map_melbourne.html" target="_blank" class="bg-white p-6 rounded-lg shadow-custom hover:shadow-lg transition-shadow">
+                    <div class="text-center">
+                        <i class="fas fa-map-marked-alt text-4xl text-red-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Melbourne Map</h3>
+                        <p class="text-gray-600">18,883 listings visualized</p>
+                    </div>
+                </a>
+
+                <a href="https://page.gensparksite.com/jupyter/6c5759b8-70df-4da8-9a8c-814797d1b143/output/map_bangkok.html" target="_blank" class="bg-white p-6 rounded-lg shadow-custom hover:shadow-lg transition-shadow">
+                    <div class="text-center">
+                        <i class="fas fa-map-marked-alt text-4xl text-orange-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Bangkok Map</h3>
+                        <p class="text-gray-600">17,595 listings visualized</p>
+                    </div>
+                </a>
+
+                <a href="https://page.gensparksite.com/jupyter/f12fc466-565a-4dc4-be42-68a8ee283453/output/map_austin.html" target="_blank" class="bg-white p-6 rounded-lg shadow-custom hover:shadow-lg transition-shadow">
+                    <div class="text-center">
+                        <i class="fas fa-map-marked-alt text-4xl text-blue-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Austin Map</h3>
+                        <p class="text-gray-600">13,829 listings visualized</p>
+                    </div>
+                </a>
+
+                <a href="https://page.gensparksite.com/jupyter/426d7da1-bd06-43d5-aec7-d0e169f7398b/output/map_istanbul.html" target="_blank" class="bg-white p-6 rounded-lg shadow-custom hover:shadow-lg transition-shadow">
+                    <div class="text-center">
+                        <i class="fas fa-map-marked-alt text-4xl text-purple-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Istanbul Map</h3>
+                        <p class="text-gray-600">21,706 listings visualized</p>
+                    </div>
+                </a>
+
+                <a href="https://page.gensparksite.com/jupyter/d7ab62c6-9308-4361-8e4e-3ecebe535cbd/output/map_cape_town.html" target="_blank" class="bg-white p-6 rounded-lg shadow-custom hover:shadow-lg transition-shadow">
+                    <div class="text-center">
+                        <i class="fas fa-map-marked-alt text-4xl text-green-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Cape Town Map</h3>
+                        <p class="text-gray-600">14,976 listings visualized</p>
+                    </div>
+                </a>
+
+                <a href="https://page.gensparksite.com/jupyter/0fdd9035-9a78-4307-83d6-e587fd948b6b/output/map_buenos_aires.html" target="_blank" class="bg-white p-6 rounded-lg shadow-custom hover:shadow-lg transition-shadow">
+                    <div class="text-center">
+                        <i class="fas fa-map-marked-alt text-4xl text-yellow-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Buenos Aires Map</h3>
+                        <p class="text-gray-600">15,778 listings visualized</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Key Findings -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center">
+                <i class="fas fa-lightbulb mr-3 text-yellow-600"></i>
+                Key Market Insights
+            </h2>
+            
+            <div class="bg-yellow-50 p-6 rounded-lg border-l-4 border-yellow-500">
+                <ul class="text-gray-700 space-y-4">
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                        <span><strong>Professional hosts control nearly 1/3 of the market</strong> (30.8% of all listings)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                        <span><strong>Bangkok shows highest commercialization</strong> with 45.8% professional host market share</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                        <span><strong>Professional hosts maintain higher availability</strong> (256 days vs 198 days annually)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                        <span><strong>Price premiums vary by city</strong> from -7.5% (Bangkok) to +37% (Austin)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                        <span><strong>Long-term rentals represent growth opportunity</strong> with only 6.1% market share</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-600 mr-3 mt-1"></i>
+                        <span><strong>Hotel room operations concentrated</strong> among professional hosts (83% of hotel room listings)</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Stay Duration Analysis -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center">
+                <i class="fas fa-clock mr-3 text-blue-600"></i>
+                Stay Duration Analysis
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="gradient-card text-white p-6 rounded-lg shadow-custom text-center">
+                    <div class="text-3xl font-bold mb-2">83.5%</div>
+                    <div class="text-sm opacity-90">Short-term Stays (1-6 nights)</div>
+                </div>
+                <div class="gradient-card text-white p-6 rounded-lg shadow-custom text-center">
+                    <div class="text-3xl font-bold mb-2">10.4%</div>
+                    <div class="text-sm opacity-90">Medium-term Stays (7-29 nights)</div>
+                </div>
+                <div class="gradient-card text-white p-6 rounded-lg shadow-custom text-center">
+                    <div class="text-3xl font-bold mb-2">6.1%</div>
+                    <div class="text-sm opacity-90">Long-term Stays (30+ nights)</div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-custom">
+                <h3 class="text-xl font-semibold text-gray-800 mb-6">Stay Duration Distribution by City</h3>
+                <div class="chart-container">
+                    <canvas id="stayDurationChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Strategic Recommendations -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center">
+                <i class="fas fa-target mr-3 text-red-600"></i>
+                Strategic Recommendations
+            </h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Regulatory Bodies -->
+                <div class="gradient-green text-white p-6 rounded-lg shadow-custom">
+                    <h3 class="text-xl font-semibold mb-4">
+                        <i class="fas fa-gavel mr-2"></i>
+                        For Regulatory Bodies
+                    </h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><i class="fas fa-arrow-right mr-2"></i>Monitor professional host concentration in Bangkok and Istanbul for potential market impacts</li>
+                        <li><i class="fas fa-arrow-right mr-2"></i>Consider differentiated regulations for hosts operating 5+ listings</li>
+                        <li><i class="fas fa-arrow-right mr-2"></i>Evaluate long-term rental conversion impacts on housing availability</li>
+                    </ul>
+                </div>
+
+                <!-- Property Investors -->
+                <div class="gradient-purple text-white p-6 rounded-lg shadow-custom">
+                    <h3 class="text-xl font-semibold mb-4">
+                        <i class="fas fa-chart-line mr-2"></i>
+                        For Property Investors
+                    </h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><i class="fas fa-arrow-right mr-2"></i>Focus on entire home/apartment properties for highest returns</li>
+                        <li><i class="fas fa-arrow-right mr-2"></i>Consider Austin and Buenos Aires for lower professional host competition</li>
+                        <li><i class="fas fa-arrow-right mr-2"></i>Explore long-term rental strategies in Austin and Bangkok markets</li>
+                    </ul>
+                </div>
+
+                <!-- Platform Operators -->
+                <div class="gradient-card text-white p-6 rounded-lg shadow-custom">
+                    <h3 class="text-xl font-semibold mb-4">
+                        <i class="fas fa-cogs mr-2"></i>
+                        For Platform Operators
+                    </h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><i class="fas fa-arrow-right mr-2"></i>Develop specialized tools for professional hosts managing 5+ properties</li>
+                        <li><i class="fas fa-arrow-right mr-2"></i>Implement dynamic pricing recommendations for professional hosts</li>
+                        <li><i class="fas fa-arrow-right mr-2"></i>Monitor market concentration to maintain platform diversity</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Conclusions -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center">
+                <i class="fas fa-flag-checkered mr-3 text-purple-600"></i>
+                Conclusions & Future Research
+            </h2>
+
+            <div class="bg-white p-8 rounded-lg shadow-custom">
+                <div class="prose prose-lg max-w-none">
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        This comprehensive analysis of 102,767 Airbnb listings across six major global cities reveals a mature and increasingly professionalized short-term rental market. With professional hosts controlling nearly one-third of all listings and commanding significant pricing premiums, the hospitality landscape is evolving toward commercial-scale operations.
+                    </p>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        The stark variations between cities - from Bangkok's highly commercialized 45.8% professional host market share to Austin's more individual-focused 23.9% - suggest that local market dynamics, regulations, and cultural factors play crucial roles in shaping professional hosting adoption.
+                    </p>
+
+                    <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500 mt-8">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Future Research Directions</h3>
+                        <ul class="text-gray-700 space-y-2">
+                            <li><i class="fas fa-research mr-2 text-blue-600"></i>Temporal analysis of professional host growth trends</li>
+                            <li><i class="fas fa-research mr-2 text-blue-600"></i>Impact assessment on local housing markets</li>
+                            <li><i class="fas fa-research mr-2 text-blue-600"></i>Guest satisfaction differences between host types</li>
+                            <li><i class="fas fa-research mr-2 text-blue-600"></i>Revenue optimization strategies for different market segments</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="mb-4">
+                <strong>Analysis Date:</strong> October 13, 2025 | 
+                <strong>Analyst:</strong> AI Data Scientist with 20+ years experience
+            </p>
+            <p class="text-sm opacity-80">
+                Analysis conducted on Airbnb listings data using Python with pandas, matplotlib, seaborn, and plotly libraries.
+                Statistical analysis includes descriptive statistics, cross-tabulations, and comparative analysis across cities and host types.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Professional Host Market Share Chart
+        const ctx1 = document.getElementById('marketDominanceChart').getContext('2d');
+        new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: ['Bangkok', 'Istanbul', 'Melbourne', 'Cape Town', 'Buenos Aires', 'Austin'],
+                datasets: [{
+                    label: 'Professional Host Market Share (%)',
+                    data: [45.8, 35.6, 32.5, 26.4, 24.8, 23.9],
+                    backgroundColor: [
+                        '#ff7675', '#74b9ff', '#a29bfe', '#fd79a8', '#fdcb6e', '#55efc4'
+                    ],
+                    borderColor: [
+                        '#d63031', '#0984e3', '#6c5ce7', '#e84393', '#e17055', '#00b894'
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 50,
+                        ticks: {
+                            callback: function(value) {
+                                return value + '%';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Price Comparison Chart
+        const ctx2 = document.getElementById('priceComparisonChart').getContext('2d');
+        new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['Melbourne', 'Bangkok', 'Austin', 'Istanbul', 'Cape Town', 'Buenos Aires'],
+                datasets: [{
+                    label: 'Professional Hosts',
+                    data: [115, 1018, 225, 548, 1378, 3456],
+                    backgroundColor: '#ff7675'
+                }, {
+                    label: 'Individual Hosts',
+                    data: [107, 1101, 164, 398, 1003, 2762],
+                    backgroundColor: '#74b9ff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) {
+                                return '$' + value;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Room Type Preferences Chart
+        const ctx3 = document.getElementById('roomTypeChart').getContext('2d');
+        new Chart(ctx3, {
+            type: 'doughnut',
+            data: {
+                labels: ['Entire home/apt', 'Private room', 'Shared room', 'Hotel room'],
+                datasets: [{
+                    label: 'Professional Hosts',
+                    data: [70.4, 22.6, 2.3, 4.7],
+                    backgroundColor: ['#ff7675', '#74b9ff', '#a29bfe', '#fdcb6e']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+
+        // City Price Chart
+        const ctx4 = document.getElementById('cityPriceChart').getContext('2d');
+        new Chart(ctx4, {
+            type: 'bar',
+            data: {
+                labels: ['Buenos Aires', 'Cape Town', 'Bangkok', 'Istanbul', 'Austin', 'Melbourne'],
+                datasets: [{
+                    label: 'Median Price ($)',
+                    data: [2981, 1100, 1099, 437, 164, 110],
+                    backgroundColor: '#55efc4',
+                    borderColor: '#00b894',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) {
+                                return '$' + value;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Stay Duration Chart
+        const ctx5 = document.getElementById('stayDurationChart').getContext('2d');
+        new Chart(ctx5, {
+            type: 'bar',
+            data: {
+                labels: ['Melbourne', 'Bangkok', 'Austin', 'Istanbul', 'Cape Town', 'Buenos Aires'],
+                datasets: [{
+                    label: 'Short-term (1-6 nights)',
+                    data: [95.8, 87.1, 87.1, 96.9, 97.4, 97.5],
+                    backgroundColor: '#74b9ff'
+                }, {
+                    label: 'Long-term (30+ nights)',
+                    data: [4.2, 12.9, 12.9, 3.1, 2.6, 2.5],
+                    backgroundColor: '#a29bfe'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        stacked: true
+                    },
+                    y: {
+                        stacked: true,
+                        beginAtZero: true,
+                        max: 100,
+                        ticks: {
+                            callback: function(value) {
+                                return value + '%';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
