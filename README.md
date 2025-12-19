@@ -276,7 +276,7 @@ Specializing in real estate market analytics and strategic insights
 
 - 📊 [Interactive Report](https://bigtime5.github.io/Airbnb-Professional-Host-Listings-Analysis/)
 - 📁 [GitHub Repository](https://github.com/bigtime5/Airbnb-Professional-Host-Listings-Analysis)
-- 📧 Contact: [Your Email]
+- 📧 Contact: [phinidygeorge01@gmail.com]
 
 ---
 
