@@ -9,7 +9,7 @@
 
 **A comprehensive data-driven analysis of professional host trends across 6 major global cities**
 
-[Overview](#-overview) • [Key Findings](#-key-findings) • [Methodology](#-methodology) • [Visualizations](#-visualizations) • [Technologies](#-technologies)
+[Overview](#-overview) • [Key Findings](#-key-findings) • [Methodology](#-methodology) • [Visualizations](#-visualizations) • [Technologies](#-technologies) • [📊 Interactive Report](https://bigtime5.github.io/Airbnb-Professional-Host-Listings-Analysis/)
 
 ---
 
@@ -18,6 +18,8 @@
 ## 🎯 Overview
 
 This project delivers a **strategic market analysis** for an international real estate firm, examining the growing presence of professional Airbnb hosts (defined as hosts with 5+ listings) across six diverse global markets. Through rigorous data analysis of **103,817 listings**, we uncover critical insights into pricing strategies, market share dynamics, and operational patterns that distinguish professional operators from individual hosts.
+
+> **🚀 [View Interactive Report](https://bigtime5.github.io/Airbnb-Professional-Host-Listings-Analysis/)** - Explore the full analysis with interactive visualizations
 
 ### 🌍 Cities Analyzed
 - **Austin** (11,269 listings)
@@ -92,6 +94,14 @@ Professional Premium:   +37% in Austin to +35.8% in Istanbul
 ---
 
 ## 📊 Visualizations
+
+### 🎨 [Explore Interactive Visualizations](https://bigtime5.github.io/Airbnb-Professional-Host-Listings-Analysis/)
+
+The full interactive report includes:
+- **Dynamic charts and graphs** with hover tooltips
+- **Interactive maps** showing listing distributions
+- **Filterable data tables** for deep-dive analysis
+- **Comparative dashboards** across all 6 cities
 
 ### Interactive Elements Created
 
@@ -174,6 +184,7 @@ airbnb-professional-host-analysis/
 │   └── map_melbourne.html
 │
 ├── analysis_notebook.ipynb          # Main analysis notebook
+├── index.html                        # Interactive report (deployed)
 └── README.md                         # This file
 ```
 
@@ -258,6 +269,14 @@ pip install pandas numpy matplotlib seaborn plotly folium
 
 **Phinidy George | Business Intelligence Specialist**  
 Specializing in real estate market analytics and strategic insights
+
+---
+
+## 🔗 Quick Links
+
+- 📊 [Interactive Report](https://bigtime5.github.io/Airbnb-Professional-Host-Listings-Analysis/)
+- 📁 [GitHub Repository](https://github.com/bigtime5/Airbnb-Professional-Host-Listings-Analysis)
+- 📧 Contact: [Your Email]
 
 ---
 
